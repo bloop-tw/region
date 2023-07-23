@@ -123,5 +123,5 @@ def region(
     else:
         LOCALE: str = res
 
-    with open("translation/" + LOCALE + ".json") as file:
+    with open(data['path'] + LOCALE + ".json") as file:
         return loc(json.load(file))
