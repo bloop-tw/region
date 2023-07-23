@@ -72,7 +72,25 @@ def init(
     """
     Initialize Region.
 
-    :param
+    ```python
+    from replit import db
+    from region import init, region
+    
+    init(
+      translation_path"translation/", # path to the translation files
+      database="database": db, # your database, for here: Replit db
+      langs=[
+        # pairs of supported languages
+        # NAME            CODE
+        ("English (US)", "en-US"),
+        ("中文（繁體）",  "zh-TW")
+      ]
+    )
+    ```
+
+    :param translation_path: Translation path, such as `translation/`
+    :param database: The database, such as `replit.db`
+    :param langs: Pair of supported languages:  `("LANGUAGE NAME", "LANGUAGE CODE")`
     """
     # NO_EQU
     for lang in langs:
